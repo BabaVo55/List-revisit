@@ -1,6 +1,6 @@
 import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
-import { useState, useEffect }, React from "react"
+import { useState, useEffect } from "react"
 
 function App() {
   const [todos, setTodos] = useState(['1', '2', '3', '4', '5', '6']) 
