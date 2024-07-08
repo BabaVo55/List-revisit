@@ -1,6 +1,6 @@
 import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
-import { useState, useEffect } from "react"
+import { useState, useEffect }, React from "react"
 
 function App() {
   const [todos, setTodos] = useState(['1', '2', '3', '4', '5', '6']) 
@@ -29,7 +29,6 @@ function App() {
     const valueTodBeEdited = todos[index]
     setTodoValue(valueTodBeEdited)
     handleDeleteTodos(index)
-
   }
   useEffect(() => {
     if (!localStorage){
@@ -39,7 +38,7 @@ function App() {
     let localTodos = localStorage.getItem('todos')
     if (!localTodos) {
       return;
-    }
+    } //localTodos
 
     localTodos = JSON.parse(localTodos).todos
     setTodos(localTodos)
